@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        /* GENERAL */
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Nunito', sans-serif;
+            color: rgb(177, 187, 201);
+        }
+
+        body{
+            background: rgb(22, 64, 63);
+        }
+
+        .container{
+            display: flex;
+        }
+        
+        nav{
+            position: relative;
+            top: 0;
+            bottom: 0;
+            height: 100vh;
+            left: 0;
+            background: rgb(56, 134, 137);
+            width: 280px;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        .logo{
+            text-align: center;
+            display: flex;
+            margin: 10px 0 0 10px;
+        }
+        .logo img{
+            width: 25px;
+            height: 25px;
+        }
+        .logo span{
+            font-weight: bold;
+            margin-left: 15%;
+            font-size: 25px;
+            width: fit-content;
+
+        }
+        a{
+            position: relative;
+            font-size: 14px;
+            display: table;
+            width: 100%;
+            padding: 7%;  
+        }
+        .nav-container{
+            background: rgb(112, 94, 127);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            transition:background 0.3s ease;
+        }
+        .nav-container:hover{
+            background: rgba(0, 0, 0, 0.3);
+        }
+        span{
+            text-decoration: none;
+            position: relative;
+        }
+        span::after{
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: width 0.5s ease, left 0.5s ease;
+        }
+        span:hover::after{
+            width: calc(100% - 10px);
+            left: 10px;
+        }
+        
+        .main{
+            position: relative;
+            padding: 20px;
+        }
+        .main h1{
+            font-size: 40px;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        .main-top{
+            display: flex;
+            width: 100%;
+            margin-top: 5vh;
+            margin-left: 25px;
+            font-size: 20px;
+        }
+        .card-section{
+            display: flex;
+            border: none;
+            padding: 20px;
+            margin: 20px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card{
+            padding: 20px;
+            width: 225px;
+            display: flex;
+            flex-direction: column;
+            height: 140px;
+            border-radius: 30px;
+            margin: 0 10px;
+            background: rgb(10, 100, 110);
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+        }
+        .card h5{
+            display: flex;
+            justify-content: flex-end;
+            font-size: 30px;
+        }
+        .card p{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .card button{
+            position: relative;
+            height: 30px;
+            width: 100%;
+            width: 40px;
+            background: transparent;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="trang chu.html" class="logo">
+                    <img src="home.png" alt="">
+                    <i class="fas trang-chu"></i>
+                    <span class="nav-item">Trang chủ</span>
+                </a></li>
+                <li><a href="" class="nav-container">
+                    <i class="fas quan-ly-khoa"></i>
+                    <span class="nav-item">Quản lý khoa</span>
+                </a></li>
+                <li><a href="" class="nav-container">
+                    <i class="fas quan-ly-chuyen-nganh"></i>
+                    <span class="nav-item">Quản lý chuyên ngành</span>
+                </a></li>
+                <li><a href="" class="nav-container">
+                    <i class="fas quan-ly-nien-khoa"></i>
+                    <span class="nav-item">Quản lý niên khóa</span>
+                </a></li>
+                <li><a href="" class="nav-container">
+                    <i class="fas quan-ly-lop"></i>
+                    <span class="nav-item">Quản lý lớp</span>
+                </a></li>
+                <li><a href="quan ly giao vien.html" class="nav-container" id="giao_vien">
+                    <i class="fas quan-ly-giao-vien"></i>
+                    <span class="nav-item">Quản lý giáo viên</span>
+                </a></li>
+                <li><a href="" class="nav-container">
+                    <i class="fas quan-ly-hoi-dong"></i>
+                    <span class="nav-item">Quản lý hội đồng</span>
+                </a></li>
+                <li><a href="" class="nav-container">
+                    <i class="fas quan-ly-sinh-vien"></i>
+                    <span class="nav-item">Quản lý sinh viên</span>
+                </a></li>
+                <li><a href="" class="nav-container">
+                    <i class="fas danh-sach-do-an"></i>
+                    <span class="nav-item">Danh sách đồ án</span>
+                </a></li>
+                <li><a href="" class="nav-container">
+                    <i class="fas quan-ly"></i>
+                    <span class="nav-item">Quản lý</span>
+                </a></li>
+            </ul>
+        </nav>
+        <section class="main">
+            <h1>Quản lý đồ án tốt nghiệp</h1>
+            <div class="main-top">
+                <h3>Thống kê</h3>
+            </div>
+            <div class="card-section">
+                <div class="card">
+                    <h5>27</h5>
+                    <p>Tổng số sinh viên</p>
+                    <button>XEM</button>
+                </div>
+                <div class="card">
+                    <h5>28</h5>
+                    <p>Tổng số lớp</p>
+                    <button>XEM</button>
+                </div>
+                <div class="card">
+                    <h5>4</h5>
+                    <p>Tổng số khoa</p>
+                    <button>XEM</button>
+                </div>
+                <div class="card">
+                    <h5>11</h5>
+                    <p>Tổng số chuyên ngành</p>
+                    <button>XEM</button>
+                </div>
+            </div>
+            <div class="card-section">
+                <div class="card">
+                    <h5>11</h5>
+                    <p>Tổng số đồ án</p>
+                    <button>XEM</button>
+                </div>
+                <div class="card">
+                    <h5>10</h5>
+                    <p>Sinh viên đạt</p>
+                    <button>XEM</button>
+                </div>
+                <div class="card">
+                    <h5>1</h5>
+                    <p>Sinh viên chưa đạt</p>
+                    <button>XEM</button>
+                </div>
+                <div class="card">
+                    <h5>23</h5>
+                    <p>Tổng số giáo viên</p>
+                    <button>XEM</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+    </script>
+</body>
+</html>
